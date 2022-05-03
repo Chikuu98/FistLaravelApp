@@ -13,6 +13,12 @@
 
             <div class="row">
                 <div class="col-md-12">
+
+                @foreach($errors->all() as $error)
+                    <div class="alert alert-danger" role="alert">
+                        {{$error}}
+                    </div>
+                @endforeach
                     <form method="post" action="/saveTask">
                         {{csrf_field()}}
                         <input type="text" class="form-control" name="task" placeholder="Enter your task here">
@@ -25,11 +31,13 @@
                         <th>ID</th>
                         <th>Task</th>
                         <th>Completed</th>
-                        <tr>
-                            <td>1</td>
-                            <td>learn laravel</td>
-                            <td>not yet</td>
-                        </tr>
+                        @foreach($tasks as $task)
+                            <tr>
+                                <td>{{$task->id}}</td>
+                                <td>{{$task->task}}</td>
+                                <td>{{$task->iscompleted}}</td>
+                            </tr>
+                        @endforeach    
                     </table>
                 </div>
             </div>
