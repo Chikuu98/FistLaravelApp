@@ -13,10 +13,13 @@
 
             <div class="row">
                 <div class="col-md-12">
-                    <input type="text" class="form-control" name="task" placeholder="Enter your task here">
-                    <br>
-                    <input type="button" class="btn btn-primary" value="SAVE">
-                    <input type="button" class="btn btn-warning" value="CLEAR">
+                    <form method="post" action="/saveTask">
+                        {{csrf_field()}}
+                        <input type="text" class="form-control" name="task" placeholder="Enter your task here">
+                        <br>
+                        <input type="submit" class="btn btn-primary" value="SAVE">
+                        <input type="button" class="btn btn-warning" value="CLEAR">
+                    </form>
                  
                     <table class="table table-dark mt-5">
                         <th>ID</th>

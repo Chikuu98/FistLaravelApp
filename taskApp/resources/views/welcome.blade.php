@@ -14,25 +14,6 @@
         <div class="text-center">
             <h1>Daily Tasks</h1>
 
-            <div class="row">
-                <div class="col-md-12">
-                    <input type="text" class="form-control" name="task" placeholder="Enter your task here">
-                    <br>
-                    <input type="button" class="btn btn-primary" value="SAVE">
-                    <input type="button" class="btn btn-warning" value="CLEAR">
-                 
-                    <table class="table table-dark mt-5">
-                        <th>ID</th>
-                        <th>Task</th>
-                        <th>Completed</th>
-                        <tr>
-                            <td>1</td>
-                            <td>learn laravel</td>
-                            <td>not yet</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
         </div>
     </div>
     </body>
