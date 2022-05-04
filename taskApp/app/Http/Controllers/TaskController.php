@@ -18,7 +18,41 @@ class TaskController extends Controller
 
         $task->task=$request->task;
         $task->save();
-        $data=Task::all();
-        return view('task')->with('tasks',$data);
+        return redirect('/task');
+    }
+
+    public function updateTaskAsCompleted($id){
+        $task1=Task::find($id);
+        $task1->iscompleted=1;
+        $task1->save();
+        return redirect()->back();
+    }
+
+    public function updateTaskAsNotCompleted($id){
+        $task1=Task::find($id);
+        $task1->iscompleted=0;
+        $task1->save();
+        return redirect()->back();
+    }
+
+    public function deleteTask($id){
+        $task1=Task::find($id);
+        $task1->delete();
+        return redirect()->back();
+    }
+
+    public function editTaskView($id){
+        $task1=Task::find($id);
+        
+        return view('editTask')->with('taskdata',$task1);
+    }
+
+    public function updateTask(Request $request){
+       $id = $request->id;
+       $task = $request->task;
+       $data = Task::find($id);
+       $data->task = $task;
+       $data->save();
+       return redirect('/task');
     }
 }

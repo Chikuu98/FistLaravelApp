@@ -24,3 +24,13 @@ Route::get('/task', function () {
 });
 
 Route::post('/saveTask',[TaskController::class, 'store']);
+
+Route::get('/markasCompleted/{id}',[TaskController::class, 'updateTaskAsCompleted']);
+
+Route::get('/markasnotCompleted/{id}',[TaskController::class, 'updateTaskAsNotCompleted']);
+
+Route::get('/deleteTask/{id}',[TaskController::class, 'deleteTask']);
+
+Route::get('/editTask/{id}',[TaskController::class, 'editTaskView']);
+
+Route::post('/updateTask',[TaskController::class, 'updateTask']);

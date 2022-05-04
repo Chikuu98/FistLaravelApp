@@ -13,6 +13,10 @@
     <div class="container">
         <div class="text-center">
             <h1>Daily Tasks</h1>
+            <br>
+            <br>
+            <br>
+            <a href="/task" class="btn btn-primary">View Tasks</a>
 
         </div>
     </div>
