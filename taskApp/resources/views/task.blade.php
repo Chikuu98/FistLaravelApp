@@ -10,7 +10,7 @@
     <div class="container">
         <div class="text-center">
             <br><br>
-            <h1 class="text-light"><b>My Tasks</b></h1><br><a href="/" class="btn btn-light">add new</a>
+            <h1 class="text-light"><b>My tasks</b></h1><br><a href="/" class="btn btn-light">add new</a>
 
             <div class="row">
                 <div class="col-md-12">
